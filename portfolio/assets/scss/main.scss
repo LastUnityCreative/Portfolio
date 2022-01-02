@@ -1,0 +1,343 @@
+                    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Moon+Dance&display=swap');
+                    @import 'reset.scss';
+                    @import 'keyframes.scss';
+                    @import 'color.scss';
+                    body {
+                        background-color: var(--body-color) !important;
+                        overflow: hidden;
+                        @media screen {
+                            overflow: scroll;
+                        }
+                    }
+                    
+                    .about-me {
+                        .container {
+                            .row {
+                                .header {
+                                    .my-name {
+                                        .name {
+                                            animation-name: name;
+                                            animation-duration: 1.7s;
+                                            animation-timing-function: ease-out;
+                                            a {
+                                                text-decoration: none;
+                                                color: var(--text-color);
+                                                font-weight: 900;
+                                            }
+                                        }
+                                        #business {
+                                            font-size: 22px;
+                                            color: var(--text-color);
+                                            animation-name: business;
+                                            animation-duration: 1.2s;
+                                            animation-timing-function: ease-in-out;
+                                            animation-fill-mode: forwards;
+                                            svg {
+                                                width: 30px;
+                                                height: 30px;
+                                                margin-right: 10px;
+                                                fill: var(--svg-color);
+                                            }
+                                        }
+                                    }
+                                    // Google Translate
+                                    .goog-te-gadget {
+                                        position: fixed;
+                                        bottom: 50%;
+                                        right: 2%;
+                                        z-index: 1;
+                                        .goog-te-gadget-simple {
+                                            border: none;
+                                            background-color: var(--body-color);
+                                            .goog-te-gadget-icon {
+                                                border-radius: 10px;
+                                                background-repeat: no-repeat;
+                                            }
+                                            span {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                    #switch {
+                                        position: fixed;
+                                        right: 10%;
+                                        top: 5%;
+                                        background-color: transparent;
+                                        border: none;
+                                        padding: 0;
+                                        color: var(--text-white-color);
+                                        animation: switch;
+                                        animation-duration: 1.5s;
+                                        z-index: 1;
+                                        svg {
+                                            width: 32px;
+                                            height: 32px;
+                                            fill: var(--svg-color);
+                                        }
+                                    }
+                                }
+                                .explanation {
+                                    width: 400px;
+                                    animation-name: explanation;
+                                    animation-duration: 0.8s;
+                                    animation-timing-function: ease-out;
+                                    p {
+                                        font-size: 24px;
+                                        color: var(--text-color);
+                                    }
+                                    .social {
+                                        a {
+                                            text-decoration: none;
+                                            width: 100px;
+                                            height: 100px;
+                                            color: var(--header-color);
+                                            background-color: var(--background-color);
+                                            font-size: 24px;
+                                            &:not(:last-child) {
+                                                margin-right: 10px;
+                                            }
+                                            padding: 10px;
+                                            border-radius: 4px;
+                                            box-shadow: var(--box-sahdow);
+                                            svg {
+                                                width: 20px;
+                                                height: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .information {
+                                    animation-name: information;
+                                    animation-duration: 0.8s;
+                                    animation-timing-function: ease-out;
+                                    .everything-about-me {
+                                        max-width: 60%;
+                                        margin-top: 10em;
+                                        a {
+                                            display: flex;
+                                            flex-direction: row;
+                                            justify-content: space-evenly;
+                                            align-items: center;
+                                            width: 120px;
+                                            height: 40px;
+                                            padding: 10px;
+                                            box-shadow: var(--box-sahdow);
+                                            text-decoration: none;
+                                            color: var(--header-color);
+                                            background-color: var(--background-color);
+                                            border-radius: 4px;
+                                            font-size: 18px;
+                                            font-weight: 700;
+                                            transition: 1s;
+                                            &:hover {
+                                                transform: scale(1.1);
+                                                transition: 1s;
+                                                svg {
+                                                    animation: pulse 1s linear infinite;
+                                                    border-radius: 50%;
+                                                }
+                                            }
+                                            svg {
+                                                width: 20px;
+                                                height: 20px;
+                                                border-radius: 50%;
+                                                fill: var(--svg-color);
+                                                margin-right: 6px;
+                                                transition: 1s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    // info Wrapper 
+                    body.info {
+                        background-image: linear-gradient( 90.7deg, #ff8500 1.9%, #ff9e00 39.3%, #0096c7 64.7%, #023e8a 100.8%) !important;
+                    }
+                    
+                    .wrapper {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275);
+                        .block {
+                            border-radius: 25px;
+                            background-color: $bg;
+                            transition: 1s;
+                            position: relative;
+                            &:hover {
+                                transform: scale(1.05, 1.05);
+                                transition: 1s;
+                            }
+                            // breadcrumb
+                            nav {
+                                display: block;
+                                margin-left: 2.5em;
+                                ol {
+                                    margin: 0;
+                                    li {
+                                        font-size: 18px;
+                                        a {
+                                            color: $red;
+                                        }
+                                    }
+                                }
+                            }
+                            p {
+                                margin: 1em 2em;
+                                font-size: 20px;
+                                span {
+                                    color: $white;
+                                    .purple {
+                                        color: $blue;
+                                        display: inline-block;
+                                        margin-right: 10px;
+                                    }
+                                    .white {
+                                        color: $light;
+                                        margin-right: 10px;
+                                    }
+                                }
+                                .gray {
+                                    color: $gray;
+                                }
+                                .green {
+                                    color: $green;
+                                    .yellow {
+                                        color: $yellow;
+                                    }
+                                    .orange {
+                                        color: $blue;
+                                    }
+                                    .red {
+                                        color: $red;
+                                    }
+                                    .more {
+                                        animation: more 1s linear infinite;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    // About me 
+                    .about-me {
+                        .container {
+                            .row {
+                                .col {
+                                    .my-name {
+                                        nav {
+                                            ol {
+                                                li {
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: $red;
+                                                        font-size: 18px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .about-me-text {
+                                    display: flex;
+                                    align-items: start;
+                                    justify-content: start;
+                                    height: 100vh;
+                                    animation-name: about-me;
+                                    animation-duration: 0.6s;
+                                    animation-fill-mode: forwards;
+                                    line-height: 1.7em;
+                                    .text-area {
+                                        background-color: var(--background-color);
+                                        border-radius: 10px;
+                                        padding: 3em;
+                                        box-shadow: var(--box-sahdow);
+                                        p {
+                                            font-size: 22px;
+                                            color: var(--text-color);
+                                            a {
+                                                color: $red;
+                                                text-decoration: none;
+                                            }
+                                        }
+                                        h2 {
+                                            display: flex;
+                                            justify-content: left;
+                                            align-items: center;
+                                            color: var(--text-color);
+                                            margin-bottom: 30px;
+                                            svg {
+                                                width: 32px;
+                                                height: 32px;
+                                                fill: var(--svg-color);
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Skills 
+                    .skills {
+                        animation-name: about-me;
+                        animation-duration: 0.6s;
+                        animation-fill-mode: forwards;
+                        h2 {
+                            display: flex;
+                            align-items: center;
+                            color: var(--text-color);
+                            svg {
+                                width: 32px;
+                                height: 32px;
+                                margin-right: 10px;
+                                fill: var(--svg-color);
+                            }
+                        }
+                        article {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fill, minmax(18rem, 0.5fr));
+                            gap: 2em;
+                            div {
+                                border: var(--border);
+                                box-shadow: var(--box-sahdow);
+                                white-space: nowrap;
+                                h4 {
+                                    display: flex;
+                                    font-size: 22px;
+                                    margin-left: 1em;
+                                    justify-content: space-between;
+                                    font-family: roboto mono;
+                                    font-weight: bolder;
+                                    color: var(--text-color);
+                                    margin-bottom: 2em;
+                                }
+                                ul {
+                                    list-style-type: none;
+                                    font-size: 0.8em;
+                                    margin: -1em 0em 1em 0em;
+                                    li {
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 1.1em;
+                                        font-family: roboto mono;
+                                        color: var(--text-color);
+                                        &:not(:last-child) {
+                                            margin-bottom: 10px;
+                                        }
+                                        svg {
+                                            width: 16px;
+                                            height: 16px;
+                                            fill: var(--svg-color);
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
