@@ -110,9 +110,18 @@
                                     animation-name: information;
                                     animation-duration: 0.8s;
                                     animation-timing-function: ease-out;
+                                    @media screen and (max-width: 768px) {
+                                        display: flex;
+                                        justify-content: center;
+                                    }
                                     .everything-about-me {
                                         max-width: 60%;
                                         margin-top: 10em;
+                                        @media screen and (max-width: 768px) {
+                                            flex-direction: column !important;
+                                            margin-top: 5em;
+                                            width: 100%;
+                                        }
                                         a {
                                             display: flex;
                                             flex-direction: row;
@@ -144,6 +153,12 @@
                                                 fill: var(--svg-color);
                                                 margin-right: 6px;
                                                 transition: 1s;
+                                            }
+                                            @media screen and (max-width: 768px) {
+                                                flex-direction: column !important;
+                                                width: 240px;
+                                                height: 80px;
+                                                margin-bottom: 2em;
                                             }
                                         }
                                     }
